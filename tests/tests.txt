@@ -1,0 +1,50 @@
+# Tests
+
+## Test 1 - Calculate an ATS score from an uploaded resume and job description [sanity]
+Viewport: desktop
+Covers: resume upload, job description analysis, AI ATS score, matched keywords, include/remove keyword results, read-only analysis
+Description: Verifies the primary ATS workflow analyzes an uploaded resume against a pasted job description without modifying the resume.
+
+Steps:
+1. Upload a readable PDF resume from the ATS score page
+2. Paste a job description containing several technical skills from and missing from the resume
+3. Click "Calculate ATS score"
+
+Expected: An ATS score out of 100 appears with matched keywords plus separate include/remove keyword guidance, and the resume content is unchanged.
+
+## Test 2 - Analyze a public job URL instead of pasted text
+Viewport: desktop
+Covers: job URL input, job-page scraping, ATS analysis result
+Description: Verifies a public job URL can be used as the target job source.
+
+Steps:
+1. Upload a readable PDF resume
+2. Enter a valid public job URL in the job URL field
+3. Click "Calculate ATS score"
+
+Expected: A target job title and ATS analysis appear, or a clear error asks the user to paste the job description if the URL cannot be read.
+
+## Test 3 - Block ATS analysis without required inputs
+Viewport: mobile
+Covers: required resume validation, required job-description validation, invalid-analysis guardrail
+Description: Verifies the analyzer does not run with missing required inputs.
+
+Steps:
+1. Open the ATS score page without uploading a resume
+2. Click "Calculate ATS score" without entering a job description
+3. Upload a resume but leave both job inputs empty
+4. Click "Calculate ATS score"
+
+Expected: A visible validation message asks for the missing resume or job description, and no ATS report is shown.
+
+## Test 4 - Show clickable social text links in every template
+Viewport: desktop
+Covers: LinkedIn text link, GitHub text link, Portfolio text link, template switching, clickable external links
+Description: Verifies the three profile links render as readable text rather than icons and remain clickable across all six templates.
+
+Steps:
+1. Create a new resume and enter valid LinkedIn, GitHub and Portfolio URLs in Personal Info
+2. Observe the live preview
+3. Switch through the six templates
+
+Expected: LinkedIn, GitHub and Portfolio appear as readable text links in every template and open the entered URLs in a new tab.
