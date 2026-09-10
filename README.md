@@ -32,3 +32,6 @@ npm run dev
 The ATS score is a keyword-match estimate for the supplied job description, not a guaranteed employer ATS score. AI suggestions should be reviewed by the user before being added to a resume.
 
 The deployed application uses AppDeploy's managed database rather than a separate MongoDB/Mongoose setup.
+
+LIVE URL -
+apna-resumate-aryaa.netlify.app
