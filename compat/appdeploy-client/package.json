@@ -1,0 +1,6 @@
+{
+  "name": "@appdeploy/client",
+  "version": "0.0.0-local",
+  "private": true,
+  "type": "module"
+}

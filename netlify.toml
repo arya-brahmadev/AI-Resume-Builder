@@ -4,6 +4,6 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://resumate-backend-aryaa-arya-fa37.vercel.app/api/:splat"
+  to = "https://resumate-backend-aryaa.vercel.app/api/:splat"
   status = 200
   force = true
